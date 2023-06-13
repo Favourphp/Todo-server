@@ -6,16 +6,24 @@ const port = 3000
 
 const app = express();
 app.use(express.json());
-// app.use(express.urlencoded({extended: true}));
+ app.use(express.urlencoded({extended: true}));
+ app.use(express.static("public"));
+ app.set("view engine", "ejs");
 // app.use(bodyparser.json({type: 'application/*+json'}))
 
-app.get('/',(req, res) =>{
-    res.send('hello world!')
+
+
+
+
+mongoose.connect("mongodb+srv://favdevs:Fav1234@cluster0.biy2mm1.mongodb.net/04-STORE-API?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
 
-app.get('/about',(req, res) =>{
-    res.send('this is the about page')
-});
+
+
+app.use(require("./route/index"))
+app.use(require("./route/todo"))
 
 app.listen(port, () => {
     console.log(`server started on ${port}`)
