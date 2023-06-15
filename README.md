@@ -18,20 +18,16 @@
 
 <ol>
   <li>Make sure you have Node.js and MongoDB installed on your system.</li>
-  <li>Clone this repository: <code>git clone &lt;repository-url&gt;</code></li>
+  <li>Clone this repository: <code>git clone &lt;https://github.com/Favourphp/Todo-server&gt;</code></li>
   <li>Navigate to the project directory: <code>cd todo-app</code></li>
   <li>Install the dependencies: <code>npm install</code></li>
   <li>Create a <code>.env</code> file in the project root and provide the necessary environment variables. For example:</li>
 </ol>
 
-<pre><code>PORT=3000
-DB_URL=mongodb://localhost:27017/todo_app
-SESSION_SECRET=your-session-secret
-</code></pre>
 
 <p>Start the application: <code>npm start</code></p>
 
-<p>Open your web browser and visit <a href="http://localhost:3000">http://localhost:3000</a> to access the Todo App.</p>
+<p>Open your web browser and visit <a href="https://github.com/Favourphp/Todo-server">https://github.com/Favourphp/Todo-server</a> to access the Todo App.</p>
 
 <h2>Dependencies</h2>
 
@@ -67,4 +63,4 @@ SESSION_SECRET=your-session-secret
 
 <h2>Contact</h2>
 
-<p>If you have any questions or suggestions regarding the Todo App, please feel free to contact me at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+<p>If you have any questions or suggestions regarding the Todo App, please feel free to contact me at <a href="favourchika02@gmail.com">favourchika02@gmail.com</a>.</p>
