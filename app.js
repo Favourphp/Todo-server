@@ -15,7 +15,7 @@ app.use(express.json());
 
 
 
-mongoose.connect("mongodb+srv://favdevs:Fav1234@cluster0.biy2mm1.mongodb.net/04-STORE-API?retryWrites=true&w=majority", {
+mongoose.connect("", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
