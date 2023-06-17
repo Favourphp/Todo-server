@@ -2,7 +2,9 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const https = require('https');
-const port = 3000
+const connectDB = require('./db/connect')
+require('dotenv').config()
+
 
 const app = express();
 app.use(express.json());
@@ -13,18 +15,19 @@ app.use(express.json());
 
 
 
-
-
-mongoose.connect("", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-
-
-
 app.use(require("./route/index"))
 app.use(require("./route/todo"))
 
-app.listen(port, () => {
-    console.log(`server started on ${port}`)
-});
+const port = process.env.PORT || 5000;
+
+const start = async() => {
+    try {
+        // connect to DB 
+        await connectDB(process.env.MONGO_URI)
+        app.listen(port, console.log(`server is listening on port ${port}...`))
+    } catch (error) {
+       console.log(error) 
+    }
+}
+
+ start()
