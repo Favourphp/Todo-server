@@ -23,6 +23,16 @@ router.post("/add/todo", (req, res)=> {
         res.redirect("/");
     })
     .catch(err => console.log(err));
+})
+
+.put("/update/todo/:_id", (req, res) => {
+const {_id} = req.params;
+Todo.updateOne({_id})
+.then(() => {
+  console.log("successfully Updated!");
+  res.redirect("/")
+})
+.catch(err => console.log(err));
 });
 
 module.exports = router;
